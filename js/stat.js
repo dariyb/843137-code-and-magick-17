@@ -38,10 +38,10 @@ window.renderStatistics = function (ctx, names, times) {
   for (var j=0;j<times.length;j++) {
     var nameTime = Math.round(times[j]);
     var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
+    ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY,COLUMN_WIDTH,columnHeight);
   };
 
   for (var i=0;i<names.length;i++) {
     ctx.fillText(names[i],COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),TEXT_Y);
-    ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY,COLUMN_WIDTH,columnHeight);
   };
 };
