@@ -35,12 +35,13 @@ window.renderStatistics = function (ctx, names, times) {
 
   var maxTime = getMaxTime(times);
 
+  for (var i=0;i<times.length;i++) {
+    var nameTime = Math.round(times[i]);
+    var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
+  };
+
   for (var i=0;i<names.length;i++) {
     ctx.fillText(names[i],COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),TEXT_Y);
     ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY,COLUMN_WIDTH,columnHeight);
   };
-  for (var i=0;i<times.length;i++) {
-    var nameTime = Math.round(times[i]);
-    var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
-  }
 };
