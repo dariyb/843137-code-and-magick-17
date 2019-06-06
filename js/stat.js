@@ -34,6 +34,10 @@ window.renderStatistics = function (ctx, names, times) {
     return maxElement;
   };
 
+  var getNameColor = function (playerName) {
+    return playerName ==='Вы'?'rgba(255, 0, 0, 1)':rgba(255, 248, 34, 0.5);
+  };
+
   var maxTime = getMaxTime(times);
 
   for (var i=0;i<times.length;i++) {
