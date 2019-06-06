@@ -7,7 +7,7 @@ var TEXT_Y = 265;
 var COLUMN_X = 100;
 var GAP = 50;
 var HISTO_HEIGHT = 150;
-var columnY = 150;
+var columnY = 100;
 
 var renderCloud = function (ctx,x,y,color) {
   ctx.fillStyle = color;
