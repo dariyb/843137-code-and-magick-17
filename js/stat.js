@@ -14,9 +14,11 @@ var renderCloud = function (ctx,x,y,color) {
 };
 
 var getMaxTime = function (array) {
-  var maxElement = array[0];
-  if (array[i]>maxElement) {
-    maxElement = array[i];
+  var maxElement = 0;
+  for (var i=0;i<array.length;i++) {
+    if (array[i]>maxElement) {
+      maxElement=array[i];
+    }
   }
   return maxElement;
 };
