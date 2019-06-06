@@ -7,6 +7,7 @@ var TEXT_Y = 265;
 var COLUMN_X = 100;
 var GAP = 50;
 var HISTO_HEIGHT = 150;
+var columnY = 150;
 
 var renderCloud = function (ctx,x,y,color) {
   ctx.fillStyle = color;
@@ -14,7 +15,7 @@ var renderCloud = function (ctx,x,y,color) {
 };
 
 var getMaxTime = function (array) {
-  var maxElement = 0;
+  var maxElement = -1;
   for (var i=0;i<array.length;i++) {
     if (array[i]>maxElement) {
       maxElement=array[i];
@@ -36,10 +37,10 @@ window.renderStatistics = function (ctx, names, times) {
 
   for (var i=0;i<names.length;i++) {
     ctx.fillText(names[i],COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),TEXT_Y);
-    ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),100,COLUMN_WIDTH,columnHeight);
+    ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY,COLUMN_WIDTH,columnHeight);
   };
-  for (var j=0;j<times.length;j++) {
+  for (var i=0;i<times.length;i++) {
     var nameTime = Math.round(times[i]);
-    var columnHeight = nameTime * HISTO_HEIGHT / (maxTime -0);
+    var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
   }
 };
