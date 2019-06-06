@@ -14,29 +14,29 @@ var renderCloud = function (ctx,x,y,color) {
   ctx.fillRect(x,y,CLOUD_WIDTH,CLOUD_HEIGHT);
 };
 
-var getMaxTime = function (array) {
-  var maxElement = -1;
-  for (var i=0;i<array.length;i++) {
-    if (array[i]>maxElement) {
-      maxElement=array[i];
-    }
-  }
-  return maxElement;
-};
-
 window.renderStatistics = function (ctx, names, times) {
   renderCloud(ctx,110,20,'rgba(0, 0, 0, 0.7)');
   renderCloud(ctx,100,10,'#fff');
   ctx.fillStyle = '#000000';
   ctx.font = '16px PT Mono';
-  ctx.fillText('Ура! Вы победили!', 110, 30);
-  ctx.fillText('Список результатов:', 110, 50);
+  ctx.fillText('Ура! Вы победили!', 110, 45);
+  ctx.fillText('Список результатов:', 110, 65);
   ctx.fillStyle = '#000';
+
+  var getMaxTime = function (array) {
+    var maxElement = -1;
+    for (var i=0;i<array.length;i++) {
+      if (array[i]>maxElement) {
+        maxElement=array[i];
+      }
+    }
+    return maxElement;
+  };
 
   var maxTime = getMaxTime(times);
 
-  for (var i=0;i<times.length;i++) {
-    var nameTime = Math.round(times[i]);
+  for (var j=0;j<times.length;j++) {
+    var nameTime = Math.round(times[j]);
     var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
   };
 
