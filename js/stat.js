@@ -35,8 +35,8 @@ window.renderStatistics = function (ctx, names, times) {
 
   var maxTime = getMaxTime(times);
 
-  for (var j=0;j<times.length;j++) {
-    var nameTime = Math.round(times[j]);
+  for (var i=0;i<times.length;i++) {
+    var nameTime = Math.round(times[i]);
     var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
     ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY,COLUMN_WIDTH,columnHeight);
   };
