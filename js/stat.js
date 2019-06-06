@@ -35,7 +35,10 @@ window.renderStatistics = function (ctx, names, times) {
   };
 
   var getNameColor = function (playerName) {
-    return playerName ==='Вы'?'rgba(255, 0, 0, 1)':rgba(255, 248, 34, 0.5);
+    if (playerName === 'Вы') {
+      return 'rgba(255, 0, 0, 1)';
+    }
+    return 'rgba(0, 0, 255, '+Math.random()+')';
   };
 
   var maxTime = getMaxTime(times);
@@ -43,7 +46,9 @@ window.renderStatistics = function (ctx, names, times) {
   for (var i=0;i<times.length;i++) {
     var nameTime = Math.round(times[i]);
     var columnHeight = nameTime * HISTO_HEIGHT / maxTime;
+    ctx.fillStyle = getNameColor(names[i]);
     ctx.fillRect(COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY,COLUMN_WIDTH,columnHeight*(-1));
+    ctx.fillStyle = '#000';
     ctx.fillText(names[i],COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),TEXT_Y);
     ctx.fillText(nameTime,COLUMN_X+COLUMN_WIDTH*i+GAP*(i+1),columnY-columnHeight-lineHeight/2);
   };
