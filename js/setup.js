@@ -5,23 +5,21 @@ document.querySelector('.setup-similar').classList.remove('hidden');
 var wizardsNames = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
 var wizardsLastNames = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
 var coatColor = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
-var eyesColor = ['black', 'red', 'blue', 'yellow', 'green'];
-for (var i = 0; i < wizardsNames.length; i++) {
-  var randomIndex = Math.floor(Math.random * wizardsNames.length);
-  var randomElement = wizardsNames[randomIndex];
-}
+var eyesColor = ['black', 'red', 'blue', 'yellow'];
+var randomName = Math.floor(Math.random() * wizardsNames.length);
+var randomLastName = Math.floor(Math.random() * wizardsLastNames.length);
 var wizards = [
   {
-    name: randomElement[i]
+    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
   },
   {
-    name: randomElement
+    name: wizardsNames[randomName] + wizardsLastNames[randomLastName]
   },
   {
-    name: randomElement
+    name: wizardsNames[randomName] + wizardsLastNames[randomLastName]
   },
   {
-    name: randomElement
+    name: wizardsNames[randomName] + wizardsLastNames[randomLastName]
   }
 ];
 var similarListElement = document.querySelector('.setup-similar-list');
