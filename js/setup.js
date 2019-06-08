@@ -12,16 +12,16 @@ for (var i = 0; i < wizardsNames.length; i++) {
 }
 var wizards = [
   {
-    name: randomElement,
+    name: randomElement
   },
   {
-    name: randomElement,
+    name: randomElement
   },
   {
-    name: randomElement,
+    name: randomElement
   },
   {
-    name: randomElement,
+    name: randomElement
   }
 ];
 var similarListElement = document.querySelector('.setup-similar-list');
