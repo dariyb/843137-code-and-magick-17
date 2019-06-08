@@ -12,7 +12,7 @@ var coatColor = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)'
 
 var eyesColor = ['black', 'red', 'blue', 'yellow'];
 
-var getRandomNumbers = function (wizardsNames, wizardsLastNames, coatColor, eyesColor) {
+var getRandomNumbers = function () {
   for (var i = 0; i < wizardsNames.length; i++) {
     var nameIndex = Math.floor(Math.random() * wizardsNames.length);
     return nameIndex;
