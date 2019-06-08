@@ -10,7 +10,7 @@ var randomName = Math.floor(Math.random() * wizardsNames.length);
 var randomLastName = Math.floor(Math.random() * wizardsLastNames.length);
 var wizards = [
   {
-    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName],
+    name: Math.random() * wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName],
     coatColor: coatColor[2]
   },
   {
