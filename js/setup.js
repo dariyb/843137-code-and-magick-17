@@ -12,14 +12,20 @@ var coatColor = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)'
 
 var eyesColor = ['black', 'red', 'blue', 'yellow'];
 
-var randomName = Math.floor(Math.random() * wizardsNames.length);
+var getRandomNumbers = function () {
+  for (var i = 0; i < wizardsNames.length; i++) {
+    var nameIndex = Math.floor(Math.random() * wizardsNames.length);
+  }
+};
+
+
 var randomLastName = Math.floor(Math.random() * wizardsLastNames.length);
 var randomCoat = Math.floor(Math.random() * coatColor.length);
 var randomEyes = Math.floor(Math.random() * eyesColor.length);
 
 var wizards = [
   {
-    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName],
+    name: wizardsNames[nameIndex] + '\n' + wizardsLastNames[randomLastName],
     coatColor: coatColor[randomCoat],
     eyesColor: eyesColor[randomEyes]
   },
