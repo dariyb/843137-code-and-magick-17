@@ -10,7 +10,8 @@ var randomName = Math.floor(Math.random() * wizardsNames.length);
 var randomLastName = Math.floor(Math.random() * wizardsLastNames.length);
 var wizards = [
   {
-    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
+    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName],
+    coatColor: coatColor[2];
   },
   {
     name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
@@ -27,5 +28,7 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template').c
 for (var i = 0; i < 4; i++) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
   wizardElement.querySelector('.setup-similar-label').textContent = wizards[i].name;
+  wizardElement.querySelector('.wizard-coat').style.fill = wizards[i].coatColor;
+  wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
   similarListElement.appendChild(wizardElement);
 }
