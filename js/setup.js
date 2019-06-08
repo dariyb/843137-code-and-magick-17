@@ -13,13 +13,13 @@ var wizards = [
     name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
   },
   {
-    name: wizardsNames[randomName] + wizardsLastNames[randomLastName]
+    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
   },
   {
-    name: wizardsNames[randomName] + wizardsLastNames[randomLastName]
+    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
   },
   {
-    name: wizardsNames[randomName] + wizardsLastNames[randomLastName]
+    name: wizardsNames[randomName] + '\n' + wizardsLastNames[randomLastName]
   }
 ];
 var similarListElement = document.querySelector('.setup-similar-list');
