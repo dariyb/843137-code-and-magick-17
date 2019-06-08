@@ -18,13 +18,16 @@ var getRandomNumbers = function () {
     return randomName;
   }
   for (i = 0; i < wizardsLastNames.length; i++) {
-    wizardsLastNames[i] = Math.floor(Math.random() * wizardsLastNames.length);
+    var randomSurname = Math.floor(Math.random() * wizardsLastNames.length);
+    return randomSurname;
   }
   for (i = 0; i < coatColor.length; i++) {
-    coatColor[i] = Math.floor(Math.random() * coatColor.length);
+    var randomCoatColor = Math.floor(Math.random() * coatColor.length);
+    return randomCoatColor;
   }
   for (i = 0; i < eyesColor.length; i++) {
-    eyesColor[i] = Math.floor(Math.random() * eyesColor.length);
+    var randomEyesColor = Math.floor(Math.random() * eyesColor.length);
+    return randomEyesColor;
   }
 };
 
