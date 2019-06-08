@@ -31,17 +31,17 @@ var wizards = [
     eyesColor: eyesColor[randomEyes]
   },
   {
-    name: wizardsNames[nameIndex] + '\n' + wizardsLastNames[randomLastName],
+    name: getRandomNumbers() + '\n' + wizardsLastNames[randomLastName],
     coatColor: coatColor[randomCoat],
     eyesColor: eyesColor[randomEyes]
   },
   {
-    name: wizardsNames[nameIndex] + '\n' + wizardsLastNames[randomLastName],
+    name: getRandomNumbers() + '\n' + wizardsLastNames[randomLastName],
     coatColor: coatColor[randomCoat],
     eyesColor: eyesColor[randomEyes]
   },
   {
-    name: wizardsNames[nameIndex] + '\n' + wizardsLastNames[randomLastName],
+    name: getRandomNumbers() + '\n' + wizardsLastNames[randomLastName],
     coatColor: coatColor[randomCoat],
     eyesColor: eyesColor[randomEyes]
   }
