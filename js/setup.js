@@ -14,7 +14,8 @@ var eyesColor = ['black', 'red', 'blue', 'yellow'];
 
 var getRandomNumbers = function () {
   for (var i = 0; i < wizardsNames.length; i++) {
-    wizardsNames[i] = Math.floor(Math.random() * wizardsNames.length);
+    var randomName = Math.floor(Math.random() * wizardsNames.length);
+    return randomName;
   }
   for (i = 0; i < wizardsLastNames.length; i++) {
     wizardsLastNames[i] = Math.floor(Math.random() * wizardsLastNames.length);
