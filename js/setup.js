@@ -15,10 +15,12 @@ var eyesColor = ['black', 'red', 'blue', 'yellow'];
 var getRandomNumbers = function () {
   for (var i = 0; i < wizardsNames.length; i++) {
     var nameIndex = Math.floor(Math.random() * wizardsNames.length);
+    return nameIndex;
   }
   for (var j = 0; j < wizardsLastNames.length; j++) {
     var surnameIndex = Math.floor(Math.random() * wizardsLastNames.length);
   }
+  return surnameIndex;
 };
 
 
