@@ -26,7 +26,7 @@ var randomEyes = Math.floor(Math.random() * eyesColor.length);
 
 var wizards = [
   {
-    name: getRandomNumbers(wizardsNames) + '\n' + wizardsLastNames[randomLastName],
+    name: getRandomNumbers() + '\n' + wizardsLastNames[randomLastName],
     coatColor: coatColor[randomCoat],
     eyesColor: eyesColor[randomEyes]
   },
