@@ -29,11 +29,12 @@ var getRandomNumbers = function () {
     var randomEyesColor = Math.floor(Math.random() * eyesColor.length);
     return randomEyesColor;
   }
+  return getRandomNumbers();
 };
 
 var wizards = [
   {
-    name: wizardsNames[getRandomNumbers()] + '\n' + wizardsLastNames[getRandomNumbers()],
+    name: wizardsNames[getRandomNumbers(wizardsNames)] + '\n' + wizardsLastNames[getRandomNumbers()],
     coatColor: coatColor[getRandomNumbers()],
     eyesColor: eyesColor[getRandomNumbers()]
   },
