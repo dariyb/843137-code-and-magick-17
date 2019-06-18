@@ -86,8 +86,8 @@ wizardEyes.addEventListener('click', function () {
   eyesInput.value = wizardEyes.style.fill;
 });
 fireballColor.addEventListener('click', function () {
-  fireballColor.style.background = fireballColors[getRandomNumbers(fireballColors)];
-  fireballInput.value = fireballColor.style.background;
+  fireballInput.value = fireballColors[getRandomNumbers(fireballColors)];
+  fireballColor.style.background = fireballInput.value;
 });
 
 var form = document.querySelector('.setup-wizard-form');
