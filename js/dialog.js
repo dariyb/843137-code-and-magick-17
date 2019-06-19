@@ -13,32 +13,32 @@
 
     var dragged = false;
 
-    var onMouseMove = function (moveEvt) {
-      moveEvt.preventDefault();
+    var onMouseMove = function (e) {
+      e.preventDefault();
       dragged = true;
 
       var shift = {
-        x: startCoordinates.x - moveEvt.clientX,
-        y: startCoordinates.y - moveEvt.clientY
+        x: startCoordinates.x - e.clientX,
+        y: startCoordinates.y - e.clientY
       };
       startCoordinates = {
-        x: moveEvt.clientX,
-        y: moveEvt.clientY
+        x: e.clientX,
+        y: e.clientY
       };
 
       setupDialogElement.style.top = (setupDialogElement.offsetTop - shift.y) + 'px';
       setupDialogElement.style.left = (setupDialogElement.offsetLeft - shift.x) + 'px';
     };
 
-    var onMouseUp = function (upEvt) {
-      upEvt.preventDefault();
+    var onMouseUp = function (event) {
+      event.preventDefault();
 
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
 
       if (dragged) {
-        var onClickPreventDefault = function (event) {
-          event.preventDefault();
+        var onClickPreventDefault = function (e) {
+          e.preventDefault();
           dialogHandle.removeEventListener('click', onClickPreventDefault);
         };
         dialogHandle.addEventListener('click', onClickPreventDefault);
