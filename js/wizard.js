@@ -8,8 +8,8 @@ window.wizard = (function () {
   var wizardEyes = document.querySelector('.setup-wizard .wizard-eyes');
 
   var wizard = {
-    onEyesChange: function (color) {},
-    onCoatChange: function (color) {}
+    onEyesChange: function () {},
+    onCoatChange: function () {}
   };
 
   var getRandomElement = function (array) {

@@ -74,7 +74,7 @@
 
   buttonSubmit.addEventListener('click', function () {
     form.addEventListener('submit', function (evt) {
-      window.backend.save(new FormData(form), function (response) {
+      window.backend.save(new FormData(form), function () {
         setupBlock.classList.add('hidden');
       });
       evt.preventDefault();
